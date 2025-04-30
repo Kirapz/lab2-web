@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мої замовлення</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Мої замовлення</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="menu.html">Меню</a></li>
+            <li><a href="cart.html">Кошик</a></li>
+            <li><a href="orders.html">Мої замовлення</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Історія замовлень</h2>
+        <table class="orders-table">
+            <thead>
+                <tr><!--- не оптимізовано під телефон -->
+                    <th>№ замовлення</th>
+                    <th>Дата</th>
+                    <th>Статус</th>
+                    <th>Сума</th>
+                    <th>Час</th>
+                </tr>
+            </thead>
+            <tbody id="orders-list">
+                <!-- Тут динамічно додаються замовлення з JavaScript -->
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<footer>
+    <p>Контакти: fgdfdgffd@gmail.com, +380 99 99 99</p>
+</footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

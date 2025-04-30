@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Наше меню</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="menu.html">Меню</a></li>
+            <li><a href="cart.html">Кошик</a></li>
+            <li><a href="orders.html">Мої замовлення</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="menu-container"></main>
+
+<main>  
+    <section>
+        <h2>Індивідуальне замовлення торта</h2>
+            <div class="item">
+                <img src="img/custom_cake.jpg" alt="Індивідуальний торт">
+                <p>Ціна залежить від вибору</p>
+
+                <form id="custom-cake-form">
+                    <select id="cake-size" required>
+                      <option value="">Оберіть розмір</option>
+                      <option value="Малий">Малий (500грн)</option>
+                      <option value="Середній">Середній (1000грн)</option>
+                      <option value="Великий">Великий (1500грн)</option>
+                    </select>
+                  
+                    <select id="cake-filling" required>
+                      <option value="">Оберіть начинку</option>
+                      <option value="Шоколадна">Шоколадна</option>
+                      <option value="Ванільна">Ванільна</option>
+                      <option value="Вишнено-малинова">Вишнено-малинова</option>
+                      <option value="Пломбірна">Пломбірна</option>
+                      <option value="Цитрусова">Цитрусова</option>
+                    </select>
+                  
+                    <textarea id="cake-decor" placeholder="Ваші побажання щодо декору (необов'язково)"  required ></textarea>
+                  
+                    <button type="submit" class="btn">Замовити</button>
+                  </form>
+                  
+
+                <script>
+                        function addCustomCakeToCart(event) {
+                        event.preventDefault(); // щоб форма не перезавантажувала сторінку
+                        alert("Торт додано до кошика!");
+                    }
+
+                    document.addEventListener("DOMContentLoaded", function () {
+                        document
+                        .querySelector("#custom-cake-form")
+                        .addEventListener("submit", addCustomCakeToCart);
+                    });
+                  </script>
+
+            </div>
+          
+    </section>
+</main>
+
+   <script src="js/script.js"></script>
+
+   <footer>
+    <p>Контакти: fgdfdgffd@gmail.com, +380 99 99 99</p>
+</footer>
+
+</body>
+</html>
